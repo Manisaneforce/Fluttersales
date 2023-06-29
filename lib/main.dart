@@ -47,8 +47,8 @@ class TextFieldExampleApp extends StatelessWidget {
             ),
         
             ListTile(
-              title: const Text('Item 1'),
-              subtitle: Text('Ragu'),
+              leading: Icon(Icons.home),
+              title: const Text('Home'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -57,22 +57,87 @@ class TextFieldExampleApp extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Item 2'),
-              subtitle: Text("Mani"),
-      
+              leading: Icon(Icons.message),
+              title: const Text('My Day Plan'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
               },
             ),
-                Icon(
-      Icons.favorite,
-      color: Colors.pink,
-      size: 24.0,
-      semanticLabel: 'Text to announce in accessibility modes',
-    ),
+             ListTile(
+              leading: Icon(Icons.man),
+              title: const Text('Add New Retailer'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.man),
+              title: const Text('Edit Retailer'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.message),
+              title: const Text('Add Distributor'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+             ListTile(
+              leading: Icon(Icons.call),
+              title: const Text('Submiited Calls'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.route),
+              title: const Text('Add rou'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.file_copy),
+              title: const Text('Order Confirmation'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.edit),
+              title: const Text('Admi Forms'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.cloud),
+              title: const Text('Outbox'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.report),
+              title: const Text('Report'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.payment),
+              title: const Text('payment'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.man),
+              title: const Text('Profile'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ), ListTile(
+              leading: Icon(Icons.message),
+              title: const Text('Add Distributor'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+  
     
           ],
         ),
