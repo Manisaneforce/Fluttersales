@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/Mydayplan.dart';
 
 /// Flutter code sample for [TextField].
 
@@ -32,11 +33,10 @@ class TextFieldExampleApp extends StatelessWidget {
           child: ObscuredTextFieldSample(),
         ),
            drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+        
         child: ListView(
-          // Important: Remove any padding from the ListView.
+          
+      
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
@@ -50,24 +50,25 @@ class TextFieldExampleApp extends StatelessWidget {
               leading: Icon(Icons.home),
               title: const Text('Home'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
+            
                 Navigator.pop(context);
               },
             ),
-            ListTile(
-              leading: Icon(Icons.message),
-              title: const Text('My Day Plan'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
+  ListTile(
+  leading: Icon(Icons.message),
+  title: const Text('My Day Plan'),
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SecondRoute()),
+    );
+  },
+),
              ListTile(
               leading: Icon(Icons.man),
               title: const Text('Add New Retailer'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pop(context,MaterialPageRoute(builder: (context) => SecondRoute()),);
               },
             ), ListTile(
               leading: Icon(Icons.man),
@@ -147,4 +148,9 @@ class TextFieldExampleApp extends StatelessWidget {
   }
 }
 
-void main() => runApp(const TextFieldExampleApp());
+void main() {
+  runApp(const MaterialApp(
+    title: 'Navigation Basics',
+    home: TextFieldExampleApp(),
+  ));
+}
